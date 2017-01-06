@@ -433,6 +433,9 @@ section#contact {
 section#contact .section-heading {
   color: white;
 }
+section#contact .section-subheading {
+  margin-bottom: 50px;
+}
 section#contact ::-webkit-input-placeholder {
   font-family: "Raleway", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
