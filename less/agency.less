@@ -51,9 +51,11 @@ h1, h2, h3, h4, h5, h6 {
 // Restyled Primary Buttons
 
 .btn-primary {
-    .button-variant(white; @theme-primary; @theme-primary);
-    .heading-font;
+    .button-variant(white; @theme-primary; white);
+    .subheading-font;
     font-weight: 700;
+    background: none;
+    letter-spacing: 1px;
 }
 
 .btn-lg {
@@ -72,6 +74,15 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 3px;
     font-size: 18px;
     padding: 20px 40px;
+}
+
+// Custom Resume link
+
+#resume-link {
+  .sans-serif-font;
+  color: #fff !important;
+  font-size: 1.25em;
+  margin: 20px 0;
 }
 
 // Custom Navigation Bar
@@ -123,7 +134,7 @@ h1, h2, h3, h4, h5, h6 {
         transition: padding 0.3s;
         border: none;
         .navbar-brand {
-            font-size: 2em;
+            font-size: 2.5em;
             -webkit-transition: all 0.3s;
             -moz-transition: all 0.3s;
             transition: all 0.3s;
@@ -139,15 +150,17 @@ h1, h2, h3, h4, h5, h6 {
             background-color: @gray-darker;
             padding: 5px 0;
             .navbar-brand {
-                padding: 0.65em 0;
-                font-size: 1.25em;
+                padding: 0.5em 0;
+                font-size: 1.5em;
+                font-weight: bold;
             }
         }
     }
 }
 
 header {
-    background-image: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5) ), url('../img/header-bg.jpg');
+    height: 100vh;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('../img/header-bg.jpg');
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: center center;
@@ -159,8 +172,9 @@ header {
         padding-bottom: 50px;
         .intro-lead-in {
             .heading-font;
-            font-size: 22px;
-            line-height: 22px;
+            font-size: 30px;
+            font-weight: bold;
+            line-height: 30px;
             margin-bottom: 25px;
         }
         .intro-heading {
@@ -178,11 +192,12 @@ header {
 
 @media(min-width:768px) {
     header {
+      height: 100vh;
         .intro-text {
             padding-top: 300px;
             padding-bottom: 200px;
             .intro-lead-in {
-                .heading-font;
+                .subheading-font;
                 font-size: 1.5em;
                 letter-spacing: .1em;
                 line-height: 2em;
@@ -191,7 +206,7 @@ header {
             .intro-heading {
                 .heading-font;
                 font-weight: 700;
-                font-size: 4em;
+                font-size: 4.5em;
                 letter-spacing: .1em;
                 line-height: 1em;
                 margin-bottom: 20px;
@@ -224,8 +239,19 @@ section {
 
 @media(min-width:768px) {
     section {
-        padding: 150px 0;
+        padding: 100px 0;
     }
+}
+
+// Education section
+
+#education {
+  padding: 50px 0 30px 0;
+  h3 {
+    .subheading-font;
+    text-transform: none;
+    font-size: 1.5em;
+  }
 }
 
 // Portfolio Section
@@ -311,12 +337,6 @@ section#contact {
     .section-heading {
         color: white;
     }
-    #resume-link {
-      .sans-serif-font;
-      color: #fff !important;
-      font-size: 1.25em;
-      margin-bottom: 20px;
-    }
     ::-webkit-input-placeholder {
        .heading-font;
        font-weight: 700;
@@ -390,6 +410,8 @@ ul.social-buttons {
         }
     }
 }
+
+
 
 .btn:focus,
 .btn:active,

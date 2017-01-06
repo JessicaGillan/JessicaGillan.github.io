@@ -32,4 +32,8 @@
         }
     });
 
+    $('a').hover( function() {
+      $(this).find('.fa').toggleClass("fa-spin")
+    })
+
 })(jQuery); // End of use strict
