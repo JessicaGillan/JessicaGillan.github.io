@@ -365,6 +365,8 @@ section h3.section-subheading {
   right: 0;
 }
 #portfolio .portfolio-item .portfolio-link {
+  border: 1px solid #eeeeee;
+  border-radius: 4px;
   display: block;
   position: relative;
   max-width: 400px;
@@ -554,6 +556,11 @@ ul.social-buttons li a:active {
 }
 .portfolio-modal .modal-content img {
   margin-bottom: 30px;
+  border: 1px solid #777777;
+  border-radius: 4px;
+}
+.portfolio-modal .modal-content img .kindred {
+  display: inline-block;
 }
 .portfolio-modal .close-modal {
   position: absolute;
